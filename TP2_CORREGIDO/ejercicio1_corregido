@@ -1,0 +1,44 @@
+#include<iostream>
+using namespace std;
+
+int main() {
+	bool garage;
+	float price;
+	string propertyType, location;
+	int priceSeventyThousand = 70000;
+	int priceHundredThousand = 100000,
+	char godoyCruz = "a";
+	char ciudad = "b";
+	char lasHeras = "c";
+	char departament = "a";
+	char house = "b";
+
+	cout << "Ingrese la ubicacion de la propiedad: a- Godoy Cruz, b- Ciudad, c- Las Heras" << endl;
+	cin >> location;
+	cout << "Ingrese el tipo de propiedad: a- Departamento o b- Casa " << endl;
+	cin >> propertyType;
+	cout << "Ingrese el precio de la propiedad: " << endl;
+	cin >> price;
+	cout << "¿La propiedad tiene cochera? (si,no)" << endl;
+	cin >> garage;
+	
+	if (location==godoyCruz && price <= priceSeventyThousand) {
+		cout << "La inmobiliaria invierte" << endl;
+	} else if (location==godoyCruz && price>priceSeventyThousand && propertyType==departament && garage==true) {
+		cout << "La inmobiliaria invierte" << endl;
+	} else if (location==ciudad && price>priceHundredThousand) {
+		cout << "La inmobiliaria no invierte" << endl;
+	} else if (location==ciudad && propertyType==house) {
+		cout << "La inmobiliaria invierte" << endl;
+	} else if (location==ciudad && propertyType==departament && garage==true) {
+		cout << "La inmobiliaria si invierte" << endl;
+	} else if (location==lasHeras && propertyType==departament && garage==true) {
+		cout << "La inmobiliaria si invierte" << endl;
+	} else {
+		cout << "La inmobiliaria debe averiguar mas datos" << endl;
+	}
+					
+				
+	return 0;
+}
+

@@ -1,0 +1,39 @@
+#include<iostream>
+using namespace std;
+
+void printDiscount(int descuento);
+
+int main() {
+	int descuento;
+	string efectivo;
+	string plan;
+
+	cout << "Para saber que descuento le corresponde, ingrese cual es su plan(A, B, C, D, otro)" << endl;
+	cin >> plan;
+	cout << "¿Va a pagar en efectivo? (si, no)" << endl;
+	cin >> efectivo;
+
+	if (efectivo=="si") {
+		cout << "Tiene descuento del 5% por pagar en efectivo" << endl;
+	}
+
+
+	if (plan=="A") {
+		printDiscount(100);
+	} else if (plan=="B" || plan=="C") {
+		printDiscount(90);
+	} else if (plan=="D") {
+		printDiscount(50);
+	} else if (plan=="otro") {
+		printDiscount(25);
+	} else {
+		cout << "No le corresponde descuento" << endl;
+	}	
+	
+	return 0;
+}
+
+void printDiscount(int descuento){
+	cout << "El descuento por el plan es del " << descuento << " %" <<endl;
+}
+
